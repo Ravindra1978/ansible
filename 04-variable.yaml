@@ -1,0 +1,11 @@
+- name: usage of variables in ansible
+  hosts: mongodb
+  vars:
+    COMPANY: syncron
+    LOCATION: hyderabad
+    COUNTRY: india
+  tasks:
+  - name: print variabels in ansible
+    ansible.builtin.debug:
+      msg: "I am working in company {{COMPANY}}, location is {{LOCATION}} and country is {{COUNTRY}}"
+   
