@@ -1,0 +1,5 @@
+- name: display msg using ansible playbook
+  hosts: mongodb
+  tasks:
+   ansible.builtin.debug:
+    msg: "hello I am Ravindra"
