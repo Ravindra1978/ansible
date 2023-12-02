@@ -3,7 +3,7 @@
     vars_files:
     - var1.yaml
     tasks:
-    - name: print varibles calling from files 
+    - name: print varibles
       ansible.builtin.debug:
         msg: "My name is {{NAME}} and my locaion is: {{LOCATION}}"
 
