@@ -1,0 +1,9 @@
+- name: print variables from inventory play
+  hosts: mongodb
+  tasks:
+  - name: print the variables which are present in inventory group
+    ansible.builtin.debug:
+       msg:  "user name: {{MONGO_USERNAME}}, category: {{MONGO_DB}}"
+
+  #create a A record in Route 53 service
+  #run command: ansible-playbook -i inventory -e ansible_user=centos -e ansible_password=DevOps321 09-vars-inventory.yaml
