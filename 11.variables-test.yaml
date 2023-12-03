@@ -1,5 +1,6 @@
 - name: declare variables at all levels and test its precedence
   hosts: localhost
+  vars:
   COUNTRY: India-play-level
   tasks:
   - name: declare variable at task level
