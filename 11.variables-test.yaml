@@ -1,5 +1,5 @@
 - name: declare variables at all levels and test its precedence
-  hosts: mongodb
+  hosts: localhost
   vars:
     COUNTRY: India-play
   tasks:
