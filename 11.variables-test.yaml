@@ -1,11 +1,11 @@
-- name: declare variables at all levels and test its precedence
-  hosts: localhost
-  vars:
-  COUNTRY: India-play-level
-  tasks:
-  - name: declare variable at task level
+  - name: declare variables at all levels and test its precedence
+    hosts: localhost
     vars:
-      COUNTRY: India-task-level    
-      ansible.builtin.debug:
-        msg: "Country name is {{COUNTRY}}"
-        
+      COUNTRY: India-play-level
+    tasks:
+    - name: declare variable at task level
+      vars:
+        COUNTRY: India-task-level    
+        ansible.builtin.debug:
+          msg: "Country name is {{COUNTRY}}"
+          
