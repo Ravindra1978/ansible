@@ -3,8 +3,8 @@
   vars:
     COUNTRY: India-play
   tasks:
-  - name: declare variable at task level
-    vars:
-      COUNTRY: India-task-level    
-      ansible.builtin.debug:
-        msg: "Country name is {{COUNTRY}}"
+    - name: declare variable at task level
+      vars:
+        COUNTRY: India-task-level    
+        ansible.builtin.debug:
+          msg: "Country name is {{COUNTRY}}"
