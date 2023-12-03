@@ -1,7 +1,12 @@
 - name: declare variables at all levels and test its precedence
-  hosts: localhost
+  hosts: mongodb
   vars:
     COUNTRY: India-play
+  vars_files:
+  - variables.yaml
+  vars_prompt:
+  - name: Please enter country name
+    private: false
   tasks:
   - name: declare variable at task level
     vars:

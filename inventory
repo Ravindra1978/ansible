@@ -1,6 +1,8 @@
 [mongodb]
 roboshop-us-dev-db-mongodb-01.ravidevops.cloud
 
+
 [mongodb:vars]
 MONGO_USERNAME=mongoadmin
 MONGO_DB=categories
+COUNTRY: India-inventory-level
