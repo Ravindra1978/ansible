@@ -1,5 +1,5 @@
 - name: declare variables at all levels and test its precedence
-  hosts: localhost
+  hosts: mongodb
   vars:
     COUNTRY: India-play
   tasks:
@@ -7,4 +7,6 @@
       vars:
         COUNTRY: India-task-level    
         ansible.builtin.debug:
-          msg: "Country name is {{COUNTRY}}"
+          msg: "Country name is: {{COUNTRY}}"
+
+
