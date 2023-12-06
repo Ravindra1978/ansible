@@ -5,13 +5,14 @@
     location: HYD-play
     country: INDIA-play
   tasks:
-    vars:
-      name: SYNCRON-task
-      location: HYD-task
-      country: INDIA-task
   - name: print hello world
     ansible.builtin.debug:
       msg: "Hello My  name is Ravindra"
-  - name: print the variable values
+
+  - name: print the variable value
+    vars:
+      name: SYNCRON-task
+      location: HYD-task
+      country: INDIA-task 
     ansible.builtin.debug:
       msg: "company name is {{name}}, location is {{location}} and country is {{country}}"
