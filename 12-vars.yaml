@@ -1,10 +1,15 @@
 - name: variables at play level usage in ansible
   hosts: localhost
   vars:
-    name: SYNCRON
-    location: HYD
-    country: INDIA
+    name: SYNCRON-play
+    location: HYD-play
+    country: INDIA-play
   tasks:
+  vars:
+    name: SYNCRON-task
+    location: HYD-task
+    country: INDIA-task
+    
   - name: print hello world
     ansible.builtin.debug:
       msg: "Hello My  name is Ravindra"
