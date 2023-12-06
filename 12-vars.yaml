@@ -1,0 +1,13 @@
+- name: variables at play level usage in ansible
+  hosts: localhost
+  vars:
+    name: SYNCRON
+    location: HYD
+    country: INDIA
+  tasks:
+  - name: print hello world
+    ansible.builtin.debug:
+      msg: "Hello My  name is Ravindra"
+  - name: print the variable values
+    ansible.builtin.debug:
+      msg: "company name is {{name}}, location is {{location}} and country is {{country}}"
