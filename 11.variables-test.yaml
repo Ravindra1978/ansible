@@ -5,13 +5,16 @@
   vars_files:
   - variables.yaml
   vars_prompt:
-  - name: Please enter country name
+  - name: NAME
+    prompt: Please enter your trainer name
     private: false
   tasks:
   - name: declare variable at task level
-    vars:
-      COUNTRY: India-task-level    
+    #vars:
+    #  COUNTRY: India-task-level    
     ansible.builtin.debug:
       msg: "Country name is: {{COUNTRY}}"
 
 
+#1.first preference is command line 
+2. task level
