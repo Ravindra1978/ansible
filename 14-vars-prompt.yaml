@@ -1,0 +1,13 @@
+- name: vars uasge from prompt level
+  hosts: localhost
+  vars_prompt:
+    name: USERNAME
+    prompt: Please enter your name
+    prvate: false
+    name: PASSWORD
+    prompt: Please enter your password
+    prvate: true
+  tasks:
+    - name: print prompt variables
+      ansible.builtin.debug:
+        msg: "User name is {{USERNAME}} and password is {{PASSWORD}}"
