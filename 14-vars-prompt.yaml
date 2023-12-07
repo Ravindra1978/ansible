@@ -3,10 +3,10 @@
   vars_prompt:
     name: USERNAME
     prompt: Please enter your name
-    prvate: false
+    private: false
     name: PASSWORD
     prompt: Please enter your password
-    prvate: true
+    private: true
   tasks:
     - name: print prompt variables
       ansible.builtin.debug:
