@@ -5,7 +5,7 @@
     location: "Hyderabad"
   tasks:
   - name: print variables
-    ansible.buitin.debug:
+    ansible.builtin.debug:
       msg: "Play level values: name is {{name}} and location is {{location}}"
   - name: inherit values from playlevel
     vars:
