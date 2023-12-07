@@ -1,8 +1,8 @@
 - name: variables at task level
   hosts: localhost
   vars:
-    - name: Syncron
-      location: Hyderabad
+  - name: Syncron
+    location: Hyderabad
   tasks:
   - name: print variables
     ansible.buitin.debug:
