@@ -1,0 +1,9 @@
+- name: declaration of variables in files 
+  hosts: localhost
+  vars_files:
+   - variables.yaml
+  tasks:
+  - name: print variable values declared from files
+    ansible.builtin.debug:
+      msg: "country is {COUNTRY}, name is {{NAME}} and location is {{LOCATION}}"
+      
