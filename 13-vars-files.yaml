@@ -5,5 +5,5 @@
   tasks:
   - name: print variable values declared from files
     ansible.builtin.debug:
-      msg: "country is {COUNTRY}, name is {{NAME}} and location is {{LOCATION}}"
+      msg: "country is {{COUNTRY}}, name is {{NAME}} and location is {{LOCATION}}"
       
