@@ -7,8 +7,9 @@
   - name: print variables
     ansible.buitin.debug:
       msg: "Play level values: name is {{name}} and location is {{location}}"
-  vars:
+  - name: inherit values from playlevel
+    vars:
     - name: TCS
       country: India
-      ansible.builtin.debug:
+    ansible.builtin.debug:
       msg: "task level values: name {{name}}, location {{location}} and country is {{country}}"
