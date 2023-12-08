@@ -1,7 +1,7 @@
 - name: variables precedence in Ansible
   hosts: mongodb
-  vars:
-    company: SYNCRON-play-level
+  # vars:
+  #   company: SYNCRON-play-level
   # vars_files:
   # - variables.yaml
   # vars_prompt:
@@ -19,4 +19,4 @@
   #2.task level
   #3.file level variable
   #4.prompt level
-  #5.
+  #5.play-lelel
