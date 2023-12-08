@@ -1,7 +1,13 @@
 - name: variables precedence in Ansible
-  hosts: localhost
+  hosts: mongodb
   vars:
     company: SYNCRON-play-level
+  vars_files:
+  - variables.yaml
+  vars_prompt:
+  - name: company
+    prompt: please enter your company name
+    private: false
   tasks:
     - name: variables at task level
       vars:
