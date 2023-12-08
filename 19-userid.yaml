@@ -12,6 +12,7 @@
     ansible.builtin.debug:
       msg: "{{output.rc}}"
   - name: create user roboshop only when RC != 0
+    become: yes
     ansible.builtin.user:
       name: roboshop
     when: output.rc != 0
