@@ -2,8 +2,8 @@
   hosts: mongodb
   vars:
     company: SYNCRON-play-level
-  vars_files:
-  - variables.yaml
+  # vars_files:
+  # - variables.yaml
   vars_prompt:
   - name: company
     prompt: please enter your company name
@@ -17,4 +17,4 @@
   #vars precedence:
   #1.arguement level
   #2.task level
-  #3.
+  #3.file level variable
