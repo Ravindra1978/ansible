@@ -1,0 +1,10 @@
+- name: variables precedence in Ansible
+  hosts: localhost
+  vars:
+    company: SYNCRON-play-level
+  tasks:
+    - name: variables at task level
+      vars:
+        company: SYNCRON-task-level
+        ansible.builtin.debug:
+          msg: "company name is {{company}}"
