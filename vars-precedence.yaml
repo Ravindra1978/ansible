@@ -6,5 +6,5 @@
     - name: variables at task level
       vars:
         company: SYNCRON-task-level
-        ansible.builtin.debug:
-          msg: "company name is {{company}}"
+      ansible.builtin.debug:
+        msg: "company name is {{company}}"
