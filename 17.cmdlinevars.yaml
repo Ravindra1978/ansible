@@ -2,5 +2,5 @@
   hosts: localhost
   tasks:
   - name: print variable value from the command line
-    ansible.builtin.debug:"
+    ansible.builtin.debug:
       msg: "I am working in {{COMPANY}}"
