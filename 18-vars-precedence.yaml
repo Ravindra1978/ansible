@@ -10,7 +10,11 @@
     private: false
   tasks:
     - name: variables at task level
-      vars:
-        company: SYNCRON-task-level
       ansible.builtin.debug:
         msg: "company name is {{company}}"
+
+
+  #vars precedence:
+  #1.arguement level
+  #2.task level
+  #3.
