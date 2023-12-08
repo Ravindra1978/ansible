@@ -1,0 +1,17 @@
+- name: create a user roboshop
+  hosts: localhost
+  tasks:
+  - name: create user roboshop
+    ansible.builtin.command: id roboshop
+    register: output
+    ignore_errors: true
+  - name: print output
+    ansible.builtin.debug:
+      msg: "ouput is {{output}}"
+  - name: print user id return code
+    ansible.builtin.debug:
+      msg: "{{output.rc}}"
+  - name: create user roboshop only when RC != 0
+    ansible.builtin.user:
+      name: roboshop
+    when: output.rc != 0
