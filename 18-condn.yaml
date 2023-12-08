@@ -1,0 +1,10 @@
+- name: checking when condition
+  hosts: localhost
+  vars:
+    NAME: DevOps
+  tasks:
+  - name: when condition usage in ansible
+    ansible.builtin.debug:
+      msg: "name is {{NAME}}"
+    when: {{NAME}} == "DevOps"
+  
