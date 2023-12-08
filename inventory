@@ -1,2 +1,2 @@
 [mongodb]
-company: SYNCRON-inventory-level
+company= "SYNCRON-inventory-level"
