@@ -2,3 +2,4 @@
 roboshop-us-dev-db-mongodb.ravidevops.cloud
 
 [mongodb:vars]
+company=SYNCRON-inventory-level
