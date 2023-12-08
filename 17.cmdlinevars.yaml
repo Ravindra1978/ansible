@@ -1,0 +1,6 @@
+- name: ansible playbook for variables usage 
+  hosts: localhost
+  tasks:
+  - name: print variable value from the command line
+    ansible.builtin.debug:"
+      msg: "I am working in {{COMPANY}}"
