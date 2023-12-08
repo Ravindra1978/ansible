@@ -4,10 +4,10 @@
     company: SYNCRON-play-level
   # vars_files:
   # - variables.yaml
-  vars_prompt:
-  - name: company
-    prompt: please enter your company name
-    private: false
+  # vars_prompt:
+  # - name: company
+  #   prompt: please enter your company name
+  #   private: false
   tasks:
     - name: variables at task level
       ansible.builtin.debug:
@@ -18,3 +18,5 @@
   #1.arguement level
   #2.task level
   #3.file level variable
+  #4.prompt level
+  #5.
