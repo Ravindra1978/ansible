@@ -1,7 +1,7 @@
 - name: checking when condition
   hosts: localhost
   vars:
-    NAME: DevOps
+    NAME: AWS
   tasks:
   - name: when condition usage in ansible
     ansible.builtin.debug:
