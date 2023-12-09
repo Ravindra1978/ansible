@@ -4,6 +4,7 @@ SECURITY_GROUP_ID=sg-02aff670556d3d4d0
 IMAGE_ID=ami-03265a0778a880afb
 INSTANCE_TYPE=""
 HOSTED_ZONE_ID=Z01163212KDRMFKEXYVZE
+ROLE_NAME=ec2-admin-role
 for i in $@
 do
     if [[ $i == "mongodb" || $i == "mysql" ]]
@@ -13,7 +14,7 @@ do
          INSTANCE_TYPE = "t2.micro"
     fi
 echo "Creating $i instance:"
-IP_ADDRESS=$(aws ec2 run-instances --image-id $IMAGE_ID --instance-type $INSTANCE_TYPE --security-group-ids $SECURITY_GROUP_ID)
+IP_ADDRESS=$(aws ec2 run-instances --image-id $IMAGE_ID --instance-type $INSTANCE_TYPE  --iam-instance-profile Name=$ROLE_NAME --security-group-ids $SECURITY_GROUP_ID)
 echo "Created $i instance: $IP_ADDRESS" 
 
 aws route53 change-resource-record-sets \
