@@ -14,8 +14,13 @@ do
          INSTANCE_TYPE="t2.micro"
     fi
 echo "Creating $i instance:"
-IP_ADDRESS=$(aws ec2 run-instances --image-id $IMAGE_ID --instance-type $INSTANCE_TYPE --iam-instance-profile Name=$ROLE_NAME --security-group-ids $SECURITY_GROUP_ID)
+IP_ADDRESS=$(aws ec2 run-instances --image-id $IMAGE_ID --instance-type $INSTANCE_TYPE --security-group-ids $SECURITY_GROUP_ID)
 echo "Created $i instance: $IP_ADDRESS" 
+
+aws ec2 associate-iam-instance-profile \
+    --instance-id i-05e76525c51127172 \
+    --iam-instance-profile Name=$ROLE_NAME
+
 
 aws route53 change-resource-record-sets \
     --hosted-zone-id $HOSTED_ZONE_ID \
