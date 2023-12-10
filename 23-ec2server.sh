@@ -3,8 +3,7 @@ DOMAIN_NAME=ravidevops.cloud
 SECURITY_GROUP_ID=sg-02aff670556d3d4d0
 IMAGE_ID=ami-03265a0778a880afb
 INSTANCE_TYPE=""
-HOSTED_ZONE_ID=Z01163212KDRMFKEXYVZE
-#ROLE_NAME=ec2-admin-role
+
 for i in $@
 do
     if [[ $i == "mongodb" || $i == "mysql" ]]
@@ -23,7 +22,7 @@ echo "Created $i instance: $IP_ADDRESS"
 
 
 aws route53 change-resource-record-sets \
-    --hosted-zone-id $HOSTED_ZONE_ID \
+    --hosted-zone-id Z01163212KDRMFKEXYVZE \
     --change-batch '{
         "Changes": [
             {
